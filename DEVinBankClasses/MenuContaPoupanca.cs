@@ -31,9 +31,9 @@ namespace DEVinBankClasses
                 ExibirMenuCP();
                 int entrada;
 
-                while (!int.TryParse(Console.ReadLine(), out entrada) || entrada < 1 || entrada > 9)
+                while (!int.TryParse(Console.ReadLine(), out entrada) || entrada < 0 || entrada > 9)
                 {
-                    Console.Write("Entrada inválida. Entre com um valor entre 1 a 9: ");
+                    Console.Write("Entrada inválida. Entre com um valor entre 0 a 9: ");
                 }
 
                 switch (entrada)
@@ -223,6 +223,18 @@ namespace DEVinBankClasses
                         voltar = true;
                         break;
 
+                    case 0:
+                        Console.Clear();
+                        Console.Write("Entre com a quantidade em meses que deseja realizar a simulacao: ");
+                        int meses = Convert.ToInt32(Console.ReadLine());
+
+                        Console.WriteLine("\n///////////////// Simulacao de Rendimento Mensal /////////////////");
+                        Console.WriteLine("Valor atual do Selic: 11,75%");
+                        Console.WriteLine("Valor atual da TR: 0,0436%");
+                        contaPoupanca1.SimularRendimento(meses);
+                        Console.WriteLine("///////////////// Simulacao de Rendimento Mensal /////////////////\n");
+                        break;
+
                     default:
                         break;
                 }
@@ -244,6 +256,7 @@ namespace DEVinBankClasses
             Console.WriteLine("[7] - Alterar Dados Cadastrais");
             Console.WriteLine("[8] - Relatorio Geral");
             Console.WriteLine("[9] - Voltar");
+            Console.WriteLine("[0] - Simular Rendimento da Conta");
 
             Console.WriteLine("-------------------- DEVinBank --------------------");
             Console.Write("\nValor inserido: ");

@@ -36,18 +36,9 @@ namespace DEVinBankClasses
 
         public void Transferencia(Conta conta1, Conta conta2, decimal valor)
         {
-            if (conta1.Saldo < valor)
-            {
-                Console.WriteLine("\n///////////////// ERRO AO REALIZAR TRANSFERENCIA /////////////////");
-                Console.WriteLine("O valor da transferencia excede a quantidade de saldo");
-                Console.WriteLine("Escolha a opcao de Transferencia novamente e entre com um valor menor ou igual ao saldo");
-                Console.WriteLine("///////////////// ERRO AO REALIZAR TRANSFERENCIA/////////////////\n");
-            }
-            else
-            {
-                conta1.Sacar(valor);
-                conta2.Depositar(valor);
-            }
+            conta1.Sacar(valor);
+            conta2.Depositar(valor);
+
         }
 
         public void ExibirDadosBancarios()
