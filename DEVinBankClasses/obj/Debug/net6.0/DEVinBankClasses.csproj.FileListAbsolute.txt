@@ -1,0 +1,12 @@
+C:\Users\guilh\Documents\C# .NET\M2P1\DEVinBankClasses\bin\Debug\net6.0\DEVinBankClasses.deps.json
+C:\Users\guilh\Documents\C# .NET\M2P1\DEVinBankClasses\bin\Debug\net6.0\DEVinBankClasses.dll
+C:\Users\guilh\Documents\C# .NET\M2P1\DEVinBankClasses\bin\Debug\net6.0\ref\DEVinBankClasses.dll
+C:\Users\guilh\Documents\C# .NET\M2P1\DEVinBankClasses\bin\Debug\net6.0\DEVinBankClasses.pdb
+C:\Users\guilh\Documents\C# .NET\M2P1\DEVinBankClasses\obj\Debug\net6.0\DEVinBankClasses.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\guilh\Documents\C# .NET\M2P1\DEVinBankClasses\obj\Debug\net6.0\DEVinBankClasses.AssemblyInfoInputs.cache
+C:\Users\guilh\Documents\C# .NET\M2P1\DEVinBankClasses\obj\Debug\net6.0\DEVinBankClasses.AssemblyInfo.cs
+C:\Users\guilh\Documents\C# .NET\M2P1\DEVinBankClasses\obj\Debug\net6.0\DEVinBankClasses.csproj.CoreCompileInputs.cache
+C:\Users\guilh\Documents\C# .NET\M2P1\DEVinBankClasses\obj\Debug\net6.0\DEVinBankClasses.dll
+C:\Users\guilh\Documents\C# .NET\M2P1\DEVinBankClasses\obj\Debug\net6.0\ref\DEVinBankClasses.dll
+C:\Users\guilh\Documents\C# .NET\M2P1\DEVinBankClasses\obj\Debug\net6.0\DEVinBankClasses.pdb
+C:\Users\guilh\Documents\C# .NET\M2P1\DEVinBankClasses\obj\Debug\net6.0\DEVinBankClasses.csproj.AssemblyReference.cache

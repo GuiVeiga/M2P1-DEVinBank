@@ -1,0 +1,3 @@
+﻿using DEVinBankClasses;
+
+MenuPrincipal.AtivarMenuPrincipal();

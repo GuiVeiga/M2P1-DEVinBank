@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.32126.317
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DEVinBankConsole", "DEVinBankConsole\DEVinBankConsole.csproj", "{2A3BC6E7-799D-4C5F-8BD9-581DE019D505}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DEVinBankClasses", "DEVinBankClasses\DEVinBankClasses.csproj", "{A08FA931-F49B-4255-9F71-29B8616A5C53}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2A3BC6E7-799D-4C5F-8BD9-581DE019D505}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2A3BC6E7-799D-4C5F-8BD9-581DE019D505}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2A3BC6E7-799D-4C5F-8BD9-581DE019D505}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2A3BC6E7-799D-4C5F-8BD9-581DE019D505}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A08FA931-F49B-4255-9F71-29B8616A5C53}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A08FA931-F49B-4255-9F71-29B8616A5C53}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A08FA931-F49B-4255-9F71-29B8616A5C53}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A08FA931-F49B-4255-9F71-29B8616A5C53}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {A243000F-56E1-47F2-8BAE-249052F53D8C}
+	EndGlobalSection
+EndGlobal

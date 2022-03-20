@@ -1,0 +1,26 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "c22312e2-abaf-430c-836f-072c65beedbc": {
+      "ProjectGuid": "c22312e2-abaf-430c-836f-072c65beedbc",
+      "DisplayName": "DEVinBankConsole",
+      "ColorIndex": 0
+    },
+    "2a3bc6e7-799d-4c5f-8bd9-581de019d505": {
+      "ProjectGuid": "2a3bc6e7-799d-4c5f-8bd9-581de019d505",
+      "DisplayName": "DEVinBankConsole",
+      "ColorIndex": 1
+    },
+    "ce1954b6-36bb-49b5-802e-2de5a05ffbdd": {
+      "ProjectGuid": "ce1954b6-36bb-49b5-802e-2de5a05ffbdd",
+      "DisplayName": "DEVinBank.Core",
+      "ColorIndex": 2
+    },
+    "a08fa931-f49b-4255-9f71-29b8616a5c53": {
+      "ProjectGuid": "a08fa931-f49b-4255-9f71-29b8616a5c53",
+      "DisplayName": "DEVinBankClasses",
+      "ColorIndex": 3
+    }
+  },
+  "NextColorIndex": 4
+}
