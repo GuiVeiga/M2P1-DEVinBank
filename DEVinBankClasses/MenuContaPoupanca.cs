@@ -31,9 +31,9 @@ namespace DEVinBankClasses
                 ExibirMenuCP();
                 int entrada;
 
-                while (!int.TryParse(Console.ReadLine(), out entrada) || entrada < 0 || entrada > 9)
+                while (!int.TryParse(Console.ReadLine(), out entrada) || entrada < 0 || entrada > 10)
                 {
-                    Console.Write("Entrada inválida. Entre com um valor entre 0 a 9: ");
+                    Console.Write("Entrada inválida. Entre com um valor entre 0 a 10: ");
                 }
 
                 switch (entrada)
@@ -220,11 +220,6 @@ namespace DEVinBankClasses
 
                     case 9:
                         Console.Clear();
-                        voltar = true;
-                        break;
-
-                    case 0:
-                        Console.Clear();
                         Console.Write("Entre com a quantidade em meses que deseja realizar a simulacao: ");
                         int meses = Convert.ToInt32(Console.ReadLine());
 
@@ -233,6 +228,11 @@ namespace DEVinBankClasses
                         Console.WriteLine("Valor atual da TR: 0,0436%");
                         contaPoupanca1.SimularRendimento(meses);
                         Console.WriteLine("///////////////// Simulacao de Rendimento Mensal /////////////////\n");
+                        break;
+
+                    case 10:
+                        Console.Clear();
+                        voltar = true;
                         break;
 
                     default:
@@ -255,8 +255,8 @@ namespace DEVinBankClasses
             Console.WriteLine("[6] - Transferencia");
             Console.WriteLine("[7] - Alterar Dados Cadastrais");
             Console.WriteLine("[8] - Relatorio Geral");
-            Console.WriteLine("[9] - Voltar");
-            Console.WriteLine("[0] - Simular Rendimento da Conta");
+            Console.WriteLine("[9] - Simular Rendimento da Conta");
+            Console.WriteLine("[10] - Voltar");
 
             Console.WriteLine("-------------------- DEVinBank --------------------");
             Console.Write("\nValor inserido: ");

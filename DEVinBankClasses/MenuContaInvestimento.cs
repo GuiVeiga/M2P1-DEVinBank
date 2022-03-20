@@ -25,15 +25,16 @@ namespace DEVinBankClasses
             listaContaInvestimento.Add(contaInvestimento2);
 
             List<string> listaExtrato = new List<string>();
+            List<string> listaInvestimento = new List<string>();
 
             while (!voltar)
             {
                 ExibirMenuCI();
                 int entrada;
 
-                while (!int.TryParse(Console.ReadLine(), out entrada) || entrada < 1 || entrada > 9)
+                while (!int.TryParse(Console.ReadLine(), out entrada) || entrada < 1 || entrada > 12)
                 {
-                    Console.Write("Entrada inválida. Entre com um valor entre 1 a 9: ");
+                    Console.Write("Entrada inválida. Entre com um valor entre 1 a 12: ");
                 }
 
                 switch (entrada)
@@ -220,6 +221,248 @@ namespace DEVinBankClasses
 
                     case 9:
                         Console.Clear();
+                        Console.WriteLine("\n///////////////// Simular Investimento /////////////////");
+                        Console.WriteLine("1 - LCI: 8% de investimento ao ano | Minimo de 6 meses de aplicacao");
+                        Console.WriteLine("2 - LCA: 9% de investimento ao ano | Minimo de 12 meses de aplicacao");
+                        Console.WriteLine("3 - CDB: 10% de investimento ao ano | Minimo de 36 meses de aplicacao");
+                        Console.WriteLine("///////////////// Simular Investimento /////////////////\n");
+
+                        Console.Write("Insira o tipo de investimento desejado: ");
+                        int tipoInvestimentoSimulado = Convert.ToInt32(Console.ReadLine());
+
+                        if (tipoInvestimentoSimulado < 1 || tipoInvestimentoSimulado > 3)
+                        {
+                            Console.WriteLine("\n///////////////// ERRO /////////////////");
+                            Console.WriteLine("Entrada invalida.");
+                            Console.WriteLine("Volte e selecione um tipo de investimento valido.");
+                            Console.WriteLine("///////////////// ERRO /////////////////\n");
+                        }
+                        else if (tipoInvestimentoSimulado == 1)
+                        {
+                            Console.Write("Entre com o valor a ser investido: R$ ");
+                            decimal valorInvestidoSimulado = Convert.ToDecimal(Console.ReadLine());
+
+                            if (valorInvestidoSimulado > contaInvestimento1.Saldo)
+                            {
+                                Console.WriteLine("\n///////////////// ERRO /////////////////");
+                                Console.WriteLine("O valor do investimento nao pode ser menor que o do saldo.");
+                                Console.WriteLine("///////////////// ERRO /////////////////\n");
+                            }
+                            else
+                            {
+                                Console.Write("Entre com a quantidade de meses desejada: ");
+                                int mesesInvestidoSimulado = Convert.ToInt32(Console.ReadLine());
+
+                                if (mesesInvestidoSimulado < 6)
+                                {
+                                    Console.WriteLine("\n///////////////// ERRO /////////////////");
+                                    Console.WriteLine("O valor minimo de meses para o Investimento LCI: 6 meses.");
+                                    Console.WriteLine("///////////////// ERRO /////////////////\n");
+                                }
+                                else
+                                {
+                                    Console.WriteLine("\n///////////////// Investimento LCI /////////////////");
+                                    contaInvestimento1.InvestimentoLCI(valorInvestidoSimulado, mesesInvestidoSimulado);
+                                    Console.WriteLine("///////////////// Investimento LCI /////////////////\n");
+                                }
+                            }
+
+                        }
+                        else if (tipoInvestimentoSimulado == 2)
+                        {
+                            Console.Write("Entre com o valor a ser investido: R$ ");
+                            decimal valorInvestidoSimulado = Convert.ToDecimal(Console.ReadLine());
+
+                            if (valorInvestidoSimulado > contaInvestimento1.Saldo)
+                            {
+                                Console.WriteLine("\n///////////////// ERRO /////////////////");
+                                Console.WriteLine("O valor do investimento nao pode ser menor que o do saldo.");
+                                Console.WriteLine("///////////////// ERRO /////////////////\n");
+                            }
+                            else
+                            {
+                                Console.Write("Entre com a quantidade de meses desejada: ");
+                                int mesesInvestidoSimulado = Convert.ToInt32(Console.ReadLine());
+
+                                if (mesesInvestidoSimulado < 12)
+                                {
+                                    Console.WriteLine("\n///////////////// ERRO /////////////////");
+                                    Console.WriteLine("O valor minimo de meses para o Investimento LCA: 12 meses.");
+                                    Console.WriteLine("///////////////// ERRO /////////////////\n");
+                                }
+                                else
+                                {
+                                    Console.WriteLine("\n///////////////// Investimento LCA /////////////////");
+                                    contaInvestimento1.InvestimentoLCA(valorInvestidoSimulado, mesesInvestidoSimulado);
+                                    Console.WriteLine("///////////////// Investimento LCA /////////////////\n");
+                                }
+                            }
+                        }
+                        else
+                        {
+                            Console.Write("Entre com o valor a ser investido: R$ ");
+                            decimal valorInvestidoSimulado = Convert.ToDecimal(Console.ReadLine());
+
+                            if (valorInvestidoSimulado > contaInvestimento1.Saldo)
+                            {
+                                Console.WriteLine("\n///////////////// ERRO /////////////////");
+                                Console.WriteLine("O valor do investimento nao pode ser menor que o do saldo.");
+                                Console.WriteLine("///////////////// ERRO /////////////////\n");
+                            }
+                            else
+                            {
+                                Console.Write("Entre com a quantidade de meses desejada: ");
+                                int mesesInvestidoSimulado = Convert.ToInt32(Console.ReadLine());
+
+                                if (mesesInvestidoSimulado < 36)
+                                {
+                                    Console.WriteLine("\n///////////////// ERRO /////////////////");
+                                    Console.WriteLine("O valor minimo de meses para o Investimento CDB: 12 meses.");
+                                    Console.WriteLine("///////////////// ERRO /////////////////\n");
+                                }
+                                else
+                                {
+                                    Console.WriteLine("\n///////////////// Investimento CDB /////////////////");
+                                    contaInvestimento1.InvestimentoCDB(valorInvestidoSimulado, mesesInvestidoSimulado);
+                                    Console.WriteLine("///////////////// Investimento CDB /////////////////\n");
+                                }
+                            }
+                        }
+                        break;
+
+                    case 10:
+                        Console.Clear();
+                        Console.WriteLine("\n///////////////// Simular Investimento /////////////////");
+                        Console.WriteLine("1 - LCI: 8% de investimento ao ano | Minimo de 6 meses de aplicacao");
+                        Console.WriteLine("2 - LCA: 9% de investimento ao ano | Minimo de 12 meses de aplicacao");
+                        Console.WriteLine("3 - CDB: 10% de investimento ao ano | Minimo de 36 meses de aplicacao");
+                        Console.WriteLine("///////////////// Simular Investimento /////////////////\n");
+
+                        Console.Write("Insira o tipo de investimento desejado: ");
+                        int tipoInvestimento = Convert.ToInt32(Console.ReadLine());
+
+                        if (tipoInvestimento < 1 || tipoInvestimento > 3)
+                        {
+                            Console.WriteLine("\n///////////////// ERRO /////////////////");
+                            Console.WriteLine("Entrada invalida.");
+                            Console.WriteLine("Volte e selecione um tipo de investimento valido.");
+                            Console.WriteLine("///////////////// ERRO /////////////////\n");
+                        }
+                        else if (tipoInvestimento == 1)
+                        {
+                            Console.Write("Entre com o valor a ser investido: R$ ");
+                            decimal valorInvestido = Convert.ToDecimal(Console.ReadLine());
+
+                            if (valorInvestido > contaInvestimento1.Saldo)
+                            {
+                                Console.WriteLine("\n///////////////// ERRO /////////////////");
+                                Console.WriteLine("O valor do investimento nao pode ser menor que o do saldo.");
+                                Console.WriteLine("///////////////// ERRO /////////////////\n");
+                            }
+                            else
+                            {
+                                Console.Write("Entre com a quantidade de meses desejada: ");
+                                int mesesInvestido = Convert.ToInt32(Console.ReadLine());
+
+                                if (mesesInvestido < 6)
+                                {
+                                    Console.WriteLine("\n///////////////// ERRO /////////////////");
+                                    Console.WriteLine("O valor minimo de meses para o Investimento LCI: 6 meses.");
+                                    Console.WriteLine("///////////////// ERRO /////////////////\n");
+                                }
+                                else
+                                {
+                                    Console.WriteLine("\n///////////////// Investimento LCI /////////////////");
+                                    contaInvestimento1.InvestimentoLCI(valorInvestido, mesesInvestido);
+                                    Console.WriteLine("///////////////// Investimento LCI /////////////////\n");
+
+                                    listaExtrato.Add($"{DateTime.Now.ToString()} - Tipo de Investimento: LCI | Valor Aplicado: R$ {valorInvestido} | Meses de investimento: {mesesInvestido}");
+                                    listaInvestimento.Add($"{DateTime.Now.ToString()} - Tipo de Investimento: LCI | Valor Aplicado: R$ {valorInvestido} | Meses de investimento: {mesesInvestido}");
+                                }
+                            }
+
+                        }
+                        else if (tipoInvestimento == 2)
+                        {
+                            Console.Write("Entre com o valor a ser investido: R$ ");
+                            decimal valorInvestido = Convert.ToDecimal(Console.ReadLine());
+
+                            if (valorInvestido > contaInvestimento1.Saldo)
+                            {
+                                Console.WriteLine("\n///////////////// ERRO /////////////////");
+                                Console.WriteLine("O valor do investimento nao pode ser menor que o do saldo.");
+                                Console.WriteLine("///////////////// ERRO /////////////////\n");
+                            }
+                            else
+                            {
+                                Console.Write("Entre com a quantidade de meses desejada: ");
+                                int mesesInvestido = Convert.ToInt32(Console.ReadLine());
+
+                                if (mesesInvestido < 12)
+                                {
+                                    Console.WriteLine("\n///////////////// ERRO /////////////////");
+                                    Console.WriteLine("O valor minimo de meses para o Investimento LCA: 12 meses.");
+                                    Console.WriteLine("///////////////// ERRO /////////////////\n");
+                                }
+                                else
+                                {
+                                    Console.WriteLine("\n///////////////// Investimento LCA /////////////////");
+                                    contaInvestimento1.InvestimentoLCA(valorInvestido, mesesInvestido);
+                                    Console.WriteLine("///////////////// Investimento LCA /////////////////\n");
+
+                                    listaExtrato.Add($"{DateTime.Now.ToString()} - Tipo de Investimento: LCA | Valor Aplicado: R$ {valorInvestido} | Meses de investimento: {mesesInvestido}");
+                                    listaInvestimento.Add($"{DateTime.Now.ToString()} - Tipo de Investimento: LCA | Valor Aplicado: R$ {valorInvestido} | Meses de investimento: {mesesInvestido}");
+                                }
+                            }
+                        }
+                        else
+                        {
+                            Console.Write("Entre com o valor a ser investido: R$ ");
+                            decimal valorInvestido = Convert.ToDecimal(Console.ReadLine());
+
+                            if (valorInvestido > contaInvestimento1.Saldo)
+                            {
+                                Console.WriteLine("\n///////////////// ERRO /////////////////");
+                                Console.WriteLine("O valor do investimento nao pode ser menor que o do saldo.");
+                                Console.WriteLine("///////////////// ERRO /////////////////\n");
+                            }
+                            else
+                            {
+                                Console.Write("Entre com a quantidade de meses desejada: ");
+                                int mesesInvestido = Convert.ToInt32(Console.ReadLine());
+
+                                if (mesesInvestido < 36)
+                                {
+                                    Console.WriteLine("\n///////////////// ERRO /////////////////");
+                                    Console.WriteLine("O valor minimo de meses para o Investimento CDB: 12 meses.");
+                                    Console.WriteLine("///////////////// ERRO /////////////////\n");
+                                }
+                                else
+                                {
+                                    Console.WriteLine("\n///////////////// Investimento CDB /////////////////");
+                                    contaInvestimento1.InvestimentoCDB(valorInvestido, mesesInvestido);
+                                    Console.WriteLine("///////////////// Investimento CDB /////////////////\n");
+
+                                    listaExtrato.Add($"{DateTime.Now.ToString()} - Tipo de Investimento: CDB | Valor Aplicado: R$ {valorInvestido} | Meses de investimento: {mesesInvestido}");
+                                    listaInvestimento.Add($"{DateTime.Now.ToString()} - Tipo de Investimento: CDB | Valor Aplicado: R$ {valorInvestido} | Meses de investimento: {mesesInvestido}");
+                                }
+                            }
+                        }
+                        break;
+
+                    case 11:
+                        Console.Clear();
+                        Console.WriteLine("\n///////////////// Lista de Investimentos /////////////////");
+                        foreach (var investimento in listaInvestimento)
+                        {
+                            Console.WriteLine(investimento);
+                            Console.WriteLine("--------------------------------------------------");
+                        }
+                        Console.WriteLine("///////////////// Lista de Investimentos /////////////////\n");
+                        break;
+
+                    case 12:
+                        Console.Clear();
                         voltar = true;
                         break;
 
@@ -235,15 +478,18 @@ namespace DEVinBankClasses
             Console.WriteLine("-------------------- Conta Investimento --------------------");
             Console.WriteLine("Entre com a operacao desejada: \n");
 
-            Console.WriteLine("[1] - Criar conta");
-            Console.WriteLine("[2] - Saque");
-            Console.WriteLine("[3] - Deposito");
-            Console.WriteLine("[4] - Saldo");
-            Console.WriteLine("[5] - Extrato");
-            Console.WriteLine("[6] - Transferencia");
-            Console.WriteLine("[7] - Alterar Dados Cadastrais");
-            Console.WriteLine("[8] - Relatorio Geral");
-            Console.WriteLine("[9] - Voltar");
+            Console.WriteLine("[1] -  Criar conta");
+            Console.WriteLine("[2] -  Saque");
+            Console.WriteLine("[3] -  Deposito");
+            Console.WriteLine("[4] -  Saldo");
+            Console.WriteLine("[5] -  Extrato");
+            Console.WriteLine("[6] -  Transferencia");
+            Console.WriteLine("[7] -  Alterar Dados Cadastrais");
+            Console.WriteLine("[8] -  Relatorio Geral");
+            Console.WriteLine("[9] -  Simular Investimento");
+            Console.WriteLine("[10] - Aplicar Investimento");
+            Console.WriteLine("[11] - Listar Investimentos");
+            Console.WriteLine("[12] - Voltar");
 
             Console.WriteLine("-------------------- DEVinBank --------------------");
             Console.Write("\nValor inserido: ");
