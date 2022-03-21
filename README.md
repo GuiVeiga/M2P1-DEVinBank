@@ -3,7 +3,7 @@
   <h2>&#9760;&#129327;&#128128; - Módulo 2 - Projeto Avaliativo 1 do Curso DEVinHouse - DEVinBank - &#128128;	&#129327;&#9760;</h2>
 </div>
 <div>
-  <p>Aplicaçao de Sistema Bancario em C#, realizado como Projeto 1 do Módulo 2 do curso DEVinHouse.</p>
+  <p>Aplicação de um Sistema Bancario em C#, realizado como Projeto 1 do Módulo 2 do Curso DEVinHouse.</p>
   
   <p>Tecnologias utilizadas: </p>
   <ul>
