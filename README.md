@@ -1,6 +1,6 @@
 <div align="center">
   <h1>Curso DEVinHouse - Turma Softplan</h1>
-  <h2>&#9760;&#129327;&#128128; - M2P1 - DEVinBank - &#128128;	&#129327;&#9760;</h2>
+  <h2>&#9760;&#129327;&#128128; - Módulo 1 Projeto 1 - DEVinBank - &#128128;	&#129327;&#9760;</h2>
 </div>
 <div>
   <p>Aplicação de um Sistema Bancario em C#, realizado como Projeto 1 do Módulo 2 do Curso DEVinHouse.</p>
