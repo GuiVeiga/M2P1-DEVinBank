@@ -8,7 +8,7 @@
   <p>Tecnologias utilizadas: </p>
   <ul>
     <li>Visual Studio Community (2022)</li>
-    <li>.Net 6 (Microsoft.Net SDK 6.0.102)(ver</li>
+    <li>.Net 6 (Microsoft.Net SDK 6.0.102)</li>
   </ul>  
 </div>
 <div align="center">
